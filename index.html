@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>vue-demo</title>
   </head>
+  <script>
+    !(function(n) {
+      function e() {
+        const e = n.document.documentElement
+        const w = e.getBoundingClientRect().width
+        // e.style.fontSize = w >= 640 ? '30px' : w <= 320 ? '20px' : (w / 320) * 15 + 'px'
+        e.style.fontSize = 32 * Math.min(w / 1920, 2) + 'px'
+      }
+      n.addEventListener('resize', function() {
+        e()
+      })
+      e()
+    })(window)
+  </script>
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->

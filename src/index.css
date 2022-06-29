@@ -1,3 +1,7 @@
+h1 {
+    font-size: 32PX; /* px-to-viewport will ignore */
+}
+
 a {
     font-size: 20px;
 }
